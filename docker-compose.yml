@@ -80,6 +80,7 @@ services:
     volumes:
       - ./loki/loki-config.yml:/etc/loki/local-config.yaml
       - loki-data:/tmp/loki
+    user: "0:0"
     command: 
       - -config.file=/etc/loki/local-config.yaml
       - -validation.allow-structured-metadata=false
