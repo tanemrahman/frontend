@@ -8,7 +8,7 @@ RUN npm ci --only=production
 
 # Copy application files
 COPY server.js ./
-COPY frontend/dist ./frontend/dist
+# frontend/dist will be mounted via volume in docker-compose.yml
 
 EXPOSE 3000
 
